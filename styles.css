@@ -5,48 +5,53 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.preload{
+    transition: none;
+    animation: none;
+}
+
+body{
+    background-image: url("./bg.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
 .navbar{
     background-color:black;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
     font-size: 1rem;
-    list-style: none;
     text-align: right;
-    padding: 10px 20px 10px 0px;
+    padding: 10px 40px 10px 0px;
     height: 45px;
-
-    /* font-weight: bold; */
 }
 
-.navbar > li{
+
+.navbar > a{
     display: inline;
-    padding-left: 15px;
-}
-
-.navbar > li > a{
     text-decoration: none;
     color: white;
+    padding-left: 15px;
     transition: color 300ms;  
 }
 
-.navbar > li > a:hover{
+.navbar > a:hover{
     color : gray;
-     
 }
 
 .mainscreen{
-    background-image: url("./bg.jpg");
     height: calc(100vh - 45px);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin-top: 45px;
     display: flex;
     align-items: center;
 }
 
-.maintext{    
-    color: white;
-}
-
-.maintext > h1{
+#name{
     padding-left: 2vw;
     font-size: 7vw;
     animation-name: slidein;
@@ -56,30 +61,69 @@
     animation-delay: 500ms;
 }
 
-.maintext > ul{
-    list-style-type: circle;  
-    font-size: 2vw;
-    padding-left: 12vw;
+#tags{
+    font-size: 3vw;
+    /* font-family: 'Playfair Display', serif; */
+    padding-left: 2.5vw;
     animation-name: slidein;
-    animation-duration: 750ms;
+    animation-duration: 1s;
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.25s;
+}
+
+#links{
+    font-size: 4vw;
+    margin-left: 2vw;
+}
+
+#links > a{
+    color: white;
+    width: 4.5vw;
+    height: 4.5vw;
+    text-align: center;
+    margin-right: 1vw;
+    text-decoration: none;
+    padding: 0.4vw;
+    border-radius: 35% 35% 5% 35%;
+    transition: box-shadow 180ms;
+    animation-name: slide2;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 1.75s;
+}
+
+#links > a:hover{
+    box-shadow: inset 4.5vw 4.5vw white;
+    color: black;
 }
 
 @media screen and (max-width: 800px){
-    .maintext > h1{
-        padding-left: 2vw;
+    #name{
         font-size: 12vw;
         white-space: nowrap;
         max-width: 100vh;
     }
     
-    .maintext > ul{
-        list-style-type: circle;  
-        font-size: 4vw;
-        padding-left: 16vw;
+    #tags{
+        font-size: 6vw;
     }
+
+    #links{
+        font-size: 7vw;
+    }
+
+    #links > a{
+        width: 7.5vw;
+        height: 7.5vw;
+        margin-right: 2vw;
+    }
+
+    #links > a:hover{
+        box-shadow: inset 7.5vw 7.5vw white;
+    }
+    
 }
 
 @keyframes slidein{
@@ -90,5 +134,16 @@
     to{
         opacity: 1;
         margin-left: 0;
+    }
+}
+
+@keyframes slide2{
+    from{
+        opacity: 0;
+        margin-left: -7.5vw;
+    }
+    to{
+        opacity: 1;
+        margin-left: 1;
     }
 }
