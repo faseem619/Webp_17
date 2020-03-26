@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <title>Bruh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./icons/css/all.css">
+    <script>
+    $(window).load(function() {
+        $("body").removeClass("preload");
+      });
+    </script>
+    <title>Portfolio</title>
 </head>
-<body>
-    <ul class = "navbar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Lorem</a></li>
-        <li><a href="#">Ipsum</a></li>
-        <li><a href="#">Dolor</a></li>
-    </ul>
+<body class="preload">
+    <p class="preload"></p>
+    <div class = "navbar">
+        <a href="#">Home</a>
+        <!-- <a href="#">Links</a>
+        <a href="#">Ipsum</a>
+        <a href="#">Dolor</a> -->
+    </div>
     <div class = "mainscreen">
-        <div class = "maintext">
-            <h1>Cliford Joshy</h1>  
-            <ul>
-                <li>Developer</li>
-                <li>Tech-Enthusiast</li>
-            </ul>
+        <div>
+            <h1 id="name">Cliford Joshy</h1>  
+            <p id ="tags">Developer.</p>
+            <br>
+            <div id = "links">
+                <a href="https://www.github.com/clifordjoshy" class="fab fa-github"></a>
+                <a href="https://www.linkedin.com/in/cliford-joshy-15b648190/" class="fab fa-linkedin"></a>
+                <a href="https://stackoverflow.com/users/13129961/clifordjoshy" class="fab fa-stack-overflow"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
         </div>
     </div>
 </body>
