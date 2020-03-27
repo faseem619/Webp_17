@@ -5,9 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.preload{
-    transition: none;
-    animation: none;
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
 }
 
 body{
@@ -63,7 +64,6 @@ body{
 
 #tags{
     font-size: 3vw;
-    /* font-family: 'Playfair Display', serif; */
     padding-left: 2.5vw;
     animation-name: slidein;
     animation-duration: 1s;
@@ -144,6 +144,6 @@ body{
     }
     to{
         opacity: 1;
-        margin-left: 1;
+        margin-left: 0;
     }
 }
